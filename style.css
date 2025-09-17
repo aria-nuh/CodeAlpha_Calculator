@@ -1,0 +1,114 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===== CALCULATOR CONTAINER ===== */
+.calculator {
+    background: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    width: 350px;
+    max-width: 90%;
+}
+
+/* ===== DISPLAY SCREEN ===== */
+#display {
+    width: 100%;
+    height: 70px;
+    font-size: 2.2rem;
+    text-align: right;
+    padding: 0 15px;
+    border-radius: 15px;
+    border: none;
+    background: #f0f0f0;
+    margin-bottom: 20px;
+    box-shadow: inset 0 -3px 5px rgba(0,0,0,0.1);
+}
+
+/* ===== BUTTON GRID ===== */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.btn {
+    padding: 22px;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 6px #ccc;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px #bbb;
+}
+
+.btn:active {
+    transform: translateY(0px);
+    box-shadow: 0 3px #aaa;
+}
+
+/* ===== COLOR CODING ===== */
+.btn.number {
+    background: #e0e0e0;
+    color: #333;
+}
+
+.btn.delete {
+    background: #ff6b6b;
+    color: #fff;
+}
+
+.btn.delete:hover {
+    background: #e05555;
+}
+
+
+.btn.operator {
+    background: #ff9f0d;
+    color: #fff;
+}
+
+.btn.operator:hover {
+    background: #e88e05;
+}
+
+.btn.clear {
+    background: #ff3b30;
+    color: #fff;
+}
+
+.btn.equal {
+    background: #0a84ff;
+    color: #fff;
+    grid-row: span 2;
+    font-weight: bold;
+}
+
+@media (max-width: 400px) {
+    #display {
+        font-size: 1.8rem;
+        height: 60px;
+    }
+    .btn {
+        font-size: 1.4rem;
+        padding: 18px;
+    }
+}
